@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Menú de Libros</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <div>
+        <h1>Listado de Libros</h1>
+        <ul>
+            <li th:each="libro : ${libros}">
+                <a th:href="@{/libros/{id}(id=${libro.id})}">
+                    [[${libro.titulo}]] - [[${libro.autor}]] - [[${libro.ejemplares}]] ejemplares - [[${libro.genero}]]
+                </a>
+            </li>
+        </ul>
+        <a href="/home">Volver a Home</a>
+    </div>
+</body>
+</html>

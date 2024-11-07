@@ -1,0 +1,15 @@
+<!-- src/main/resources/templates/lotoResult.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resultado de Loto</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <div>
+        <h1>Resultado de Loto para [[${country}]]</h1>
+        <p>Números generados: <span th:text="${combination}"></span></p>
+        <a href="/loto/menu">Volver al menú de Loto</a>
+    </div>
+</body>
+</html>

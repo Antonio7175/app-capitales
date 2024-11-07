@@ -1,0 +1,20 @@
+<!-- src/main/resources/templates/lotoMenu.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Loto Menu</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <div>
+        <h1>Menú de Loto</h1>
+        <ul>
+            <li><a th:href="@{/loto/genera/49/6/spain}">Generar Lotto Española (6 de 49)</a></li>
+            <li><a th:href="@{/loto/genera/49/6/germany}">Generar Lotto Alemana (6 de 49)</a></li>
+            <li><a th:href="@{/loto/genera/90/6/france}">Generar Lotto Francesa (6 de 90)</a></li>
+            <li><a th:href="@{/loto/genera/59/5/italy}">Generar Lotto Italiana (5 de 59)</a></li>
+        </ul>
+        <a href="/home">Volver a Home</a>
+    </div>
+</body>
+</html>

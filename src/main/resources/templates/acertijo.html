@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Acertijo de Capitales</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <div>
+        <h1>Adivina la Capital</h1>
+        <img th:src="${capitalAleatoria.imagen}" alt="Imagen de la capital" width="500px"/>
+
+        <h3>¿Cuál es esta ciudad?</h3>
+        <ul>
+            <li th:each="opcion : ${opciones}">
+                <a th:href="@{/verificar(respuesta=${opcion.nombre}, correcta=${capitalAleatoria.nombre})}" 
+                   th:text="${opcion.nombre}"></a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

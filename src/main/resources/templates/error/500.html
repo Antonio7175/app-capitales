@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Error 500</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+    .error-container {
+        margin: 50px auto;
+        padding: 20px;
+        max-width: 600px;
+        background-color: #fff3f3;
+        border: 2px solid #ff5e5e;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        color: #d32f2f;
+        text-align: center;
+    }
+    .error-info {
+        color: #333;
+        padding: 10px;
+        background-color: #ffe6e6;
+        border-radius: 5px;
+    }
+    hr {
+        border: 1px solid #ff5e5e;
+    }
+</style>
+</head>
+<body>
+	<div class="error-container">
+		<h1>Error 500</h1>
+		<div class="error-info">
+			<strong>Error:</strong> <span th:text="${error}"></span><br>
+			<strong>Status:</strong> <span th:text="${status}"></span><br>
+			<strong>Timestamp:</strong> <span th:text="${timestamp}"></span><br>
+		</div>
+		<hr>
+		<div class="error-info">
+			<strong>Trace:</strong><br>
+			<span th:text="${trace}"></span>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Detalle del Libro</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <div>
+        <h1>Detalle del Libro</h1>
+        <p>Título: <span th:text="${libro.titulo}"></span></p>
+        <p>Autor: <span th:text="${libro.autor}"></span></p>
+        <p>Ejemplares: <span th:text="${libro.ejemplares}"></span></p>
+        <p>Género: <a th:href="@{/libros/genero/{genero}(genero=${libro.genero})}" th:text="${libro.genero}"></a></p>
+        <a href="/libros/menu">Volver al menú de Libros</a>
+    </div>
+</body>
+</html>
